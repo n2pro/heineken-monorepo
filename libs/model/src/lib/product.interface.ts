@@ -1,3 +1,13 @@
+export class ProductConfig {
+  showPlacePrice: boolean;
+  qtyTheme: string;
+
+  constructor(showPlacePrice:boolean = true, qtyTheme:string = 'theme1') {
+    this.showPlacePrice = showPlacePrice;
+    this.qtyTheme = qtyTheme;
+  }
+}
+
 export interface Product {
   id?: string;
   sku?: string;
