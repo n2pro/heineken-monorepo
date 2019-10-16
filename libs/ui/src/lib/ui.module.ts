@@ -5,7 +5,6 @@ import { ProductComponent } from './components/product/product.component';
 import { PriceComponent } from './components/price/price.component';
 import { Header, Footer, HeinekenTemplate } from './components/common/shared';
 
-
 @NgModule({
   imports: [CommonModule],
   declarations: [Header, Footer, HeinekenTemplate, QuantityComponent, ProductComponent, PriceComponent],

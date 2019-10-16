@@ -26,9 +26,7 @@
               "apps/heineken/src/assets"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "apps/heineken/src/styles"
-              ]
+              "includePaths": ["apps/heineken/src/styles"]
             },
             "styles": [
               "libs/shared/styles/src/index.scss",
@@ -309,9 +307,7 @@
             "aot": false,
             "assets": ["apps/russia/src/favicon.ico", "apps/russia/src/assets"],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "apps/russia/src/styles"
-              ]
+              "includePaths": ["apps/russia/src/styles"]
             },
             "styles": [
               "libs/shared/styles/src/index.scss",
@@ -411,6 +407,31 @@
           "options": {
             "tsConfig": ["apps/russia-e2e/tsconfig.e2e.json"],
             "exclude": ["**/node_modules/**", "!apps/russia-e2e/**"]
+          }
+        }
+      }
+    },
+    "shared-mock": {
+      "root": "libs/shared/mock",
+      "sourceRoot": "libs/shared/mock/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/mock/tsconfig.lib.json",
+              "libs/shared/mock/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/mock/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/mock/jest.config.js",
+            "tsConfig": "libs/shared/mock/tsconfig.spec.json"
           }
         }
       }

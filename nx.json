@@ -34,6 +34,9 @@
     },
     "russia": {
       "tags": []
+    },
+    "shared-mock": {
+      "tags": []
     }
   }
 }

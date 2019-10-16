@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProductService } from '@heineken/api';
+import { Product } from '@heineken/model';
 
 @Component({
   selector: 'heineken-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'russia';
+  
+  public products: Product[];
+
+  constructor( private readonly productService: ProductService) {
+    this.products = this.productService.getProduct();
+  }
 }

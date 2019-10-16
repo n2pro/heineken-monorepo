@@ -3,11 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { UiModule } from '@heineken/ui';
+import { ApiModule } from '@heineken/api';
+import { AppLayoutComponent } from './_layout/app-layout/app-layout.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, UiModule],
+  declarations: [AppComponent, AppLayoutComponent],
+  imports: [BrowserModule, UiModule, ApiModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [AppLayoutComponent]
 })
 export class AppModule {}

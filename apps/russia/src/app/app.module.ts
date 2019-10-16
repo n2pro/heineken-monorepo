@@ -3,16 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
-import { UiModule } from '@heineken/ui'
+import { UiModule } from '@heineken/ui';
+import { ApiModule } from '@heineken/api';
+import { AppLayoutComponent } from './_layout/app-layout/app-layout.component'
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AppLayoutComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
-    UiModule
+    UiModule,
+    ApiModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [AppLayoutComponent]
 })
 export class AppModule {}
