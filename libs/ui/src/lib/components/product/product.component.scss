@@ -1,5 +1,43 @@
 @import '_variables';
 
 .product-wrapper {
-    border: 1px solid $productBorderWraper;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $productBorderWrapper;
+  border-radius: 5px;
+  background: $productWrapperBackground;
+  margin-bottom: 10px; // todo
+  transition: .3s;
+
+  &:hover{
+    transform: scale(1.035);
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .body {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+    > img {
+      max-width: 100%;
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+    }
+
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+  }
+
+  .footer {
+    border-top: 1px solid $gray;
+    padding: 10px;
+  }
 }

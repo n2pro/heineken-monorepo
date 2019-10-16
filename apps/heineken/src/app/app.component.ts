@@ -7,16 +7,11 @@ import { ProductService } from '@heineken/api';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-
 export class AppComponent {
   title = 'heineken';
   public products: Product[];
 
-  constructor( private readonly productService: ProductService) {
+  constructor(private readonly productService: ProductService) {
     this.products = this.productService.getProduct();
   }
-
-
-
-
 }

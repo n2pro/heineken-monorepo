@@ -1,18 +1,12 @@
-import { Component, OnInit, Input, forwardRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'heineken-quantity',
   templateUrl: './quantity.component.html',
-  styleUrls: ['./quantity.component.scss'],
+  styleUrls: ['./quantity.component.scss']
 })
-
-export class QuantityComponent implements OnInit {
+export class QuantityComponent {
   @Input() theme: any;
 
-  ngOnInit(): void {
-    const t = this;
-  }
- 
-  constructor() {}  
+  constructor() {}
 }

@@ -4,12 +4,9 @@
 <main>
   <h2>Catalog</h2>
   <heineken-product *ngFor="let product of products" [product]="product">
-      <hot-header>
-          <span> {{ product.name }}</span>
-        </hot-header>
     <hot-footer>
-      <div>Package Type: {{ product.packageType}}</div>
-      <div>Package Size: {{ product.packageSize}}</div>
+      <div>Package Type: {{ product.packageType }}</div>
+      <div>Package Size: {{ product.packageSize }}</div>
     </hot-footer>
   </heineken-product>
 </main>

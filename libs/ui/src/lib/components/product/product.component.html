@@ -1,15 +1,20 @@
 <div class="product-wrapper">
-    <div class="header" *ngIf="productHeader">
-        <ng-content select="hot-header"></ng-content>
+  <div class="header" *ngIf="productHeader">
+    <ng-content select="hot-header"></ng-content>
+  </div>
+
+  <div class="body">
+    <img [src]="product.images[0]" />
+
+    <div class="text-content">
+      <span>{{ product.name }}</span>
+      <heineken-price></heineken-price>
     </div>
-    <div class="body">
-         <div>{{ product.name}}</div>
-    <heineken-price></heineken-price>
+
     <heineken-quantity theme="theme2"></heineken-quantity>
+  </div>
 
-    </div>    
-
-    <div class="footer" *ngIf="productFooter">
-        <ng-content select="hot-footer"></ng-content>
-    </div>
+  <div class="footer" *ngIf="productFooter">
+    <ng-content select="hot-footer"></ng-content>
+  </div>
 </div>

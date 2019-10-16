@@ -9,7 +9,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Pilsener',
     brandGroup: 'Bintang Radler',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-radler-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-radler-id.png',
     isFeatured: true,
     isInStock: true,
     isAlcoholic: false,
@@ -28,8 +28,8 @@ export const productsMock: Product[] = [
     salePrice: 33219000,
     emptiesDeposit: 2400000,
     images: [
-      'hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png',
-      'hot-images-dev.azureedge.net/catalog/4a6f0/10164/image_860604160056484054883.gif'
+      'http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png',
+      'http://hot-images-dev.azureedge.net/catalog/4a6f0/10164/image_860604160056484054883.gif'
     ],
     unitsOfMeasure: [
       {
@@ -53,7 +53,7 @@ export const productsMock: Product[] = [
     type: 'Beer',
     brand: 'Heineken',
     brandGroup: 'Heineken',
-    brandGroupImageUrl: 'hot-images-dev.azureedge.net/brands/heineken-id.png',
+    brandGroupImageUrl: 'http://hot-images-dev.azureedge.net/brands/heineken-id.png',
     isFeatured: true,
     isInStock: true,
     isAlcoholic: true,
@@ -71,7 +71,7 @@ export const productsMock: Product[] = [
     listPrice: 97780000,
     salePrice: 97779000,
     emptiesDeposit: 50000000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: 'da6cc6ae68d4426c9d57d464a8588627',
@@ -81,7 +81,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Pilsener',
     brandGroup: 'Bintang Pilsener',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-pilsener-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-pilsener-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: true,
@@ -99,7 +99,7 @@ export const productsMock: Product[] = [
     listPrice: 36960000,
     salePrice: 36959000,
     emptiesDeposit: 3120000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: '9cbdbab7d1414274adfb553d67a3e13b',
@@ -109,7 +109,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Pilsener',
     brandGroup: 'Bintang Pilsener',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-pilsener-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-pilsener-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: true,
@@ -127,7 +127,7 @@ export const productsMock: Product[] = [
     listPrice: 36960000,
     salePrice: 36959000,
     emptiesDeposit: 5120000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: '4eedd80d68d942c794c1128b30462d06',
@@ -137,7 +137,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Pilsener',
     brandGroup: 'Bintang Pilsener',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-pilsener-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-pilsener-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: true,
@@ -154,7 +154,7 @@ export const productsMock: Product[] = [
     unitVolume: 0.0062,
     listPrice: 39600000,
     salePrice: 39599000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: '67384cabf800467c8464b943cfdad8ad',
@@ -164,7 +164,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Pilsener',
     brandGroup: 'Bintang Pilsener',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-pilsener-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-pilsener-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: true,
@@ -181,7 +181,7 @@ export const productsMock: Product[] = [
     unitVolume: 0.0062,
     listPrice: 41580000,
     salePrice: 41579000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: 'e788c3f158ff47d59994c8ad8a644eae',
@@ -191,7 +191,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Pilsener',
     brandGroup: 'Bintang Pilsener',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-pilsener-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-pilsener-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: true,
@@ -208,7 +208,7 @@ export const productsMock: Product[] = [
     unitVolume: 0.0062,
     listPrice: 56650000,
     salePrice: 56649000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: 'ceab5276587444028107ae9482fce0fd',
@@ -218,7 +218,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Pilsener',
     brandGroup: 'Bintang Pilsener',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-pilsener-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-pilsener-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: true,
@@ -235,7 +235,7 @@ export const productsMock: Product[] = [
     unitVolume: 0.0062,
     listPrice: 54010000,
     salePrice: 54009000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: 'd6400c827f3e481f906bd5ea6efa3442',
@@ -245,7 +245,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Pilsener',
     brandGroup: 'Bintang Pilsener',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-pilsener-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-pilsener-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: true,
@@ -263,7 +263,7 @@ export const productsMock: Product[] = [
     listPrice: 53780000,
     salePrice: 53779000,
     emptiesDeposit: 50000000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: '38996bacb93c425dab7ea9fc71ad7ffd',
@@ -273,7 +273,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Radler Lemon',
     brandGroup: 'Bintang Radler',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-radler-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-radler-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: true,
@@ -291,7 +291,7 @@ export const productsMock: Product[] = [
     listPrice: 35200000,
     salePrice: 35199000,
     emptiesDeposit: 3120000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: '9caab4b3a55a4f6eb9f52b517dcf144c',
@@ -301,7 +301,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Radler Lemon',
     brandGroup: 'Bintang Radler',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-radler-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-radler-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: true,
@@ -318,7 +318,7 @@ export const productsMock: Product[] = [
     unitVolume: 0.0062,
     listPrice: 41580000,
     salePrice: 41579000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: '26f7f7c39d99472d8d5302076ccdb432',
@@ -328,7 +328,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Radler Lemon',
     brandGroup: 'Bintang Radler',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-radler-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-radler-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: true,
@@ -345,7 +345,7 @@ export const productsMock: Product[] = [
     unitVolume: 0.0062,
     listPrice: 39600000,
     salePrice: 39599000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: '2e277d3906ac441589ca114c97bf7e8a',
@@ -355,7 +355,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Radler Orange',
     brandGroup: 'Bintang Radler',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-radler-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-radler-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: true,
@@ -373,7 +373,7 @@ export const productsMock: Product[] = [
     listPrice: 36960000,
     salePrice: 36959000,
     emptiesDeposit: 3120000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: '1f0f959c29294d0a9bf18c8b2b239689',
@@ -383,7 +383,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Radler Orange',
     brandGroup: 'Bintang Radler',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-radler-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-radler-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: true,
@@ -400,7 +400,7 @@ export const productsMock: Product[] = [
     unitVolume: 0.0062,
     listPrice: 41580000,
     salePrice: 41579000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: '41d695c8a89247188c2ed356c8352bf6',
@@ -410,7 +410,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Radler Zero',
     brandGroup: 'Bintang Zero',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-zero-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-zero-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: false,
@@ -427,7 +427,7 @@ export const productsMock: Product[] = [
     unitVolume: 0.0062,
     listPrice: 27720000,
     salePrice: 27719000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: 'a97b266e76a14c26bfefb33a7ce2a21f',
@@ -437,7 +437,7 @@ export const productsMock: Product[] = [
     brand: 'Bintang Zero Original',
     brandGroup: 'Bintang Zero',
     brandGroupImageUrl:
-      'hot-images-dev.azureedge.net/brands/bintang-zero-id.png',
+      'http://hot-images-dev.azureedge.net/brands/bintang-zero-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: false,
@@ -454,7 +454,7 @@ export const productsMock: Product[] = [
     unitVolume: 0.0062,
     listPrice: 15730000,
     salePrice: 15729000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: '9b462fec480b47bfb46d59159ff7b64c',
@@ -463,7 +463,7 @@ export const productsMock: Product[] = [
     type: 'Non alcoholic',
     brand: 'Fayrouz Pear',
     brandGroup: 'Fayrouz',
-    brandGroupImageUrl: 'hot-images-dev.azureedge.net/brands/fayrouz-id.png',
+    brandGroupImageUrl: 'http://hot-images-dev.azureedge.net/brands/fayrouz-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: false,
@@ -480,7 +480,7 @@ export const productsMock: Product[] = [
     unitVolume: 0.0062,
     listPrice: 10175200,
     salePrice: 10174200,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: '25e17861ba824434b1d1b9d09223193d',
@@ -489,7 +489,7 @@ export const productsMock: Product[] = [
     type: 'Non alcoholic',
     brand: 'Fayrouz Pear',
     brandGroup: 'Fayrouz',
-    brandGroupImageUrl: 'hot-images-dev.azureedge.net/brands/fayrouz-id.png',
+    brandGroupImageUrl: 'http://hot-images-dev.azureedge.net/brands/fayrouz-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: false,
@@ -506,7 +506,7 @@ export const productsMock: Product[] = [
     unitVolume: 0.0062,
     listPrice: 16280000,
     salePrice: 16279000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   },
   {
     id: 'efdaebe3ef24435eb87e6566e77f3628',
@@ -515,7 +515,7 @@ export const productsMock: Product[] = [
     type: 'Non alcoholic',
     brand: 'Fayrouz Pineapple',
     brandGroup: 'Fayrouz',
-    brandGroupImageUrl: 'hot-images-dev.azureedge.net/brands/fayrouz-id.png',
+    brandGroupImageUrl: 'http://hot-images-dev.azureedge.net/brands/fayrouz-id.png',
     isFeatured: false,
     isInStock: true,
     isAlcoholic: false,
@@ -532,6 +532,6 @@ export const productsMock: Product[] = [
     unitVolume: 0.0062,
     listPrice: 10175000,
     salePrice: 10174000,
-    images: ['hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
+    images: ['http://hot-images-dev.azureedge.net/catalog/9aa23/10164/0_0_orig.png']
   }
 ];
