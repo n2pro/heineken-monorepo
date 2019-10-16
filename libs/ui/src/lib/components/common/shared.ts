@@ -29,3 +29,11 @@ export class HeinekenTemplate {
         return this.name;
     }
 }
+
+@Component({
+    selector: 'heineken-base-quantity',
+    template: ''
+})
+export class BaseQuantityComponent {
+    @Input() theme: any;
+}
