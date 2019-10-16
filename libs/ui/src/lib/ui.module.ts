@@ -1,4 +1,5 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { QuantityComponent } from './components/quantity/quantity.component';
 import { ProductComponent } from './components/product/product.component';
@@ -12,7 +13,7 @@ import {
 import { UiModuleConfig, QTY_SERVICE, QtyService } from './service/qty.service';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   declarations: [
     Header,
     Footer,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'heineken-price',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./price.component.scss']
 })
 export class PriceComponent implements OnInit {
-
+  @Input() price: { salePrice: number, listPrice: number }
+  
   constructor() { }
 
   ngOnInit() {

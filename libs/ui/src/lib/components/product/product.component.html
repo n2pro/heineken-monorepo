@@ -8,7 +8,7 @@
 
     <div class="text-content">
       <span>{{ product.name }}</span>
-      <heineken-price></heineken-price>
+      <heineken-price [price]="product" *ngIf="productConfig.showPlacePrice"></heineken-price>
     </div>
 
     <heineken-quantity [theme]="productConfig.qtyTheme"></heineken-quantity>

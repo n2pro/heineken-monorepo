@@ -12,12 +12,15 @@ export class QuantityComponent extends BaseQuantityComponent {
   constructor(@Inject(QTY_SERVICE) private readonly libService: IQtyService) {
     super();
   }
+  public qty = 0;
 
   public add() {
+    this.qty += 1
     this.libService.addToCart();
   }
 
   public remove() {
+    this.qty = 0;
     this.libService.remove();
   }
 
