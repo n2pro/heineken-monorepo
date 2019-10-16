@@ -1,0 +1,19 @@
+<header class="flex">
+  <img
+    alt="Nx logo"
+    width="75"
+    src="https://nx.dev/assets/images/nx-logo-white.svg"
+  />
+  <h1>Welcome to {{ title }}!</h1>
+</header>
+<main>
+  <h2>Catalog</h2>
+  <heineken-product *ngFor="let product of [1, 2, 3]">
+      <hot-header>
+          <span> + some header </span>
+        </hot-header>
+    <hot-footer>
+      <span> + some footer </span>
+    </hot-footer>
+  </heineken-product>
+</main>

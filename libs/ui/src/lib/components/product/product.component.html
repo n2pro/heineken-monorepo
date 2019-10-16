@@ -1,0 +1,16 @@
+<div>
+    <div class="header" *ngIf="productHeader">
+        <ng-content select="hot-header"></ng-content>
+    </div>
+    <div class="body">
+         <div>Name</div>
+    <heineken-price></heineken-price>
+    <heineken-quantity theme="theme2"></heineken-quantity>
+
+    </div>
+    
+
+    <div class="footer" *ngIf="productFooter">
+        <ng-content select="hot-footer"></ng-content>
+    </div>
+</div>

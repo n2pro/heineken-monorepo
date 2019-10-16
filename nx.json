@@ -1,0 +1,39 @@
+{
+  "npmScope": "heineken",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "heineken-e2e": {
+      "tags": []
+    },
+    "heineken": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    },
+    "api": {
+      "tags": []
+    },
+    "model": {
+      "tags": []
+    },
+    "shared-styles": {
+      "tags": []
+    },
+    "shared-assets": {
+      "tags": []
+    },
+    "russia-e2e": {
+      "tags": []
+    },
+    "russia": {
+      "tags": []
+    }
+  }
+}

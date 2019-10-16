@@ -1,0 +1,432 @@
+{
+  "version": 1,
+  "projects": {
+    "heineken": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/heineken",
+      "sourceRoot": "apps/heineken/src",
+      "prefix": "heineken",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/heineken",
+            "index": "apps/heineken/src/index.html",
+            "main": "apps/heineken/src/main.ts",
+            "polyfills": "apps/heineken/src/polyfills.ts",
+            "tsConfig": "apps/heineken/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/heineken/src/favicon.ico",
+              "apps/heineken/src/assets"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "apps/heineken/src/styles"
+              ]
+            },
+            "styles": [
+              "libs/shared/styles/src/index.scss",
+              "apps/heineken/src/styles/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/heineken/src/environments/environment.ts",
+                  "with": "apps/heineken/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "heineken:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "heineken:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "heineken:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/heineken/tsconfig.app.json",
+              "apps/heineken/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/heineken/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/heineken/jest.config.js",
+            "tsConfig": "apps/heineken/tsconfig.spec.json",
+            "setupFile": "apps/heineken/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "heineken-e2e": {
+      "root": "apps/heineken-e2e",
+      "sourceRoot": "apps/heineken-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/heineken-e2e/cypress.json",
+            "tsConfig": "apps/heineken-e2e/tsconfig.e2e.json",
+            "devServerTarget": "heineken:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "heineken:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/heineken-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/heineken-e2e/**"]
+          }
+        }
+      }
+    },
+    "ui": {
+      "projectType": "library",
+      "root": "libs/ui",
+      "sourceRoot": "libs/ui/src",
+      "prefix": "heineken",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui/tsconfig.lib.json",
+              "libs/ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ui/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui/jest.config.js",
+            "tsConfig": "libs/ui/tsconfig.spec.json",
+            "setupFile": "libs/ui/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "api": {
+      "projectType": "library",
+      "root": "libs/api",
+      "sourceRoot": "libs/api/src",
+      "prefix": "heineken",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/api/tsconfig.lib.json",
+              "libs/api/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/api/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/api/jest.config.js",
+            "tsConfig": "libs/api/tsconfig.spec.json",
+            "setupFile": "libs/api/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "model": {
+      "projectType": "library",
+      "root": "libs/model",
+      "sourceRoot": "libs/model/src",
+      "prefix": "heineken",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/model/tsconfig.lib.json",
+              "libs/model/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/model/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/model/jest.config.js",
+            "tsConfig": "libs/model/tsconfig.spec.json",
+            "setupFile": "libs/model/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "shared-styles": {
+      "projectType": "library",
+      "root": "libs/shared/styles",
+      "sourceRoot": "libs/shared/styles/src",
+      "prefix": "heineken",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/styles/tsconfig.lib.json",
+              "libs/shared/styles/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/styles/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/styles/jest.config.js",
+            "tsConfig": "libs/shared/styles/tsconfig.spec.json",
+            "setupFile": "libs/shared/styles/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "shared-assets": {
+      "projectType": "library",
+      "root": "libs/shared/assets",
+      "sourceRoot": "libs/shared/assets/src",
+      "prefix": "heineken",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/assets/tsconfig.lib.json",
+              "libs/shared/assets/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/assets/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/assets/jest.config.js",
+            "tsConfig": "libs/shared/assets/tsconfig.spec.json",
+            "setupFile": "libs/shared/assets/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "russia": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/russia",
+      "sourceRoot": "apps/russia/src",
+      "prefix": "heineken",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/russia",
+            "index": "apps/russia/src/index.html",
+            "main": "apps/russia/src/main.ts",
+            "polyfills": "apps/russia/src/polyfills.ts",
+            "tsConfig": "apps/russia/tsconfig.app.json",
+            "aot": false,
+            "assets": ["apps/russia/src/favicon.ico", "apps/russia/src/assets"],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "apps/russia/src/styles"
+              ]
+            },
+            "styles": [
+              "libs/shared/styles/src/index.scss",
+              "apps/russia/src/styles/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/russia/src/environments/environment.ts",
+                  "with": "apps/russia/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "russia:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "russia:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "russia:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/russia/tsconfig.app.json",
+              "apps/russia/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/russia/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/russia/jest.config.js",
+            "tsConfig": "apps/russia/tsconfig.spec.json",
+            "setupFile": "apps/russia/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "russia-e2e": {
+      "root": "apps/russia-e2e",
+      "sourceRoot": "apps/russia-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/russia-e2e/cypress.json",
+            "tsConfig": "apps/russia-e2e/tsconfig.e2e.json",
+            "devServerTarget": "russia:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "russia:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/russia-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/russia-e2e/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "heineken"
+}

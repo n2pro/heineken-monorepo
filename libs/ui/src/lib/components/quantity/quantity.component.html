@@ -1,0 +1,10 @@
+<div [ngSwitch]="theme">
+    <ng-template  [ngSwitchCase]="'theme2'">
+        <input type="number">
+    </ng-template>
+    <ng-template [ngSwitchCase]="'theme1'">
+        <button>-</button>
+        <input type="number">
+        <button>+</button>
+    </ng-template>
+</div>
