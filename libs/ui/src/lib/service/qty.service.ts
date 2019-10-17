@@ -1,7 +1,7 @@
 import { Injectable, InjectionToken, Type } from '@angular/core';
 
 export interface IQtyService {
-  addToCart(): void;
+  addToCart(qty: number): number
   remove(): void;
 }
 
@@ -18,7 +18,8 @@ export class QtyService implements IQtyService {
   public remove(): void {
     console.log('UiModule QtyService remove');
   }
-  public addToCart(): void {
+  public addToCart(qty: number): number {
     console.log(' UiModule QtyService addToCart');
+    return qty += 1;
   }
 }

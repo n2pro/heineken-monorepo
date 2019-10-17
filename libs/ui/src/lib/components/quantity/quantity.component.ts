@@ -9,19 +9,18 @@ import { QTY_SERVICE, IQtyService } from 'libs/ui/src/lib/service/qty.service';
 })
 
 export class QuantityComponent extends BaseQuantityComponent {
-  constructor(@Inject(QTY_SERVICE) private readonly libService: IQtyService) {
+  constructor(@Inject(QTY_SERVICE) private readonly qtyService: IQtyService) {
     super();
   }
   public qty = 0;
 
   public add() {
-    this.qty += 1
-    this.libService.addToCart();
+    this.qty = this.qtyService.addToCart(this.qty);
   }
 
   public remove() {
     this.qty = 0;
-    this.libService.remove();
+    this.qtyService.remove();
   }
 
 }

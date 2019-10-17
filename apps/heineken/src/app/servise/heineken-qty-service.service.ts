@@ -5,8 +5,9 @@ import { IQtyService } from 'libs/ui/src/lib/service/qty.service';
   providedIn: 'root'
 })
 export class HeinekenQtyServiceService implements IQtyService {
-  addToCart(): void {
+  addToCart( qty: number): number {
     console.log('HeinekenQtyServiceService add to cart')
+    return qty +=0.5;
   }
   remove(): void {
     console.log('HeinekenQtyServiceService remove')

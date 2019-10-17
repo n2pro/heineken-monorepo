@@ -3,10 +3,12 @@
 </header>
 <main>
   <h2>Catalog</h2>
-  <heineken-product *ngFor="let product of products" [product]="product">
+  <heineken-product *ngFor="let product of products; let i = index" [product]="product" [productConfig]="getConfig(i)">
     <hot-footer>
-      <div>Package Type: {{ product.packageType }}</div>
-      <div>Package Size: {{ product.packageSize }}</div>
+      <div class="">
+          <div>Package Type: {{ product.packageType }}</div>
+          <div>Package Size: {{ product.packageSize }}</div>
+      </div>
     </hot-footer>
   </heineken-product>
 </main>
